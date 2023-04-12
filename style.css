@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
 * {
     padding: 0;
     margin: 0;
 }
 
+:root {
+    --LovelyGradientColor1: #D14D72;
+    --LovelyGradientColor2: #FCC8D1;
+}
+
 .body {
-    background-color:azure;
+    background-color: azure;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
+    font-family: 'Playfair Display', serif;
 }
 
 .navbar {
@@ -18,24 +26,70 @@
 }
 
 .leftSideMenu {
-    background-color:khaki;
+    background-color: plum;
     grid-column: 1 / span 2;
-    grid-row: 2/ span 5;
+    grid-row: 2 / span 5;
 }
 
-.rightSideMenu{
-    background-color: blueviolet;
+.rightSideMenu {
+    background-color: olive;
     grid-column: 11 / span 2;
-    grid-row: 2/ span 10;
+    grid-row: 2 / span 10;
 }
-.footer{
-    background-color: black;
+
+.footer {
+    background-color: blanchedalmond;
     grid-column: 1 / span 3;
     grid-row: 12 / span 2;
 }
-.content{
-    background-color:darkgray;
+
+.content {
+    background-color: #FCC8D1;
     grid-column: 3 / span 8;
     grid-row: 2 / span 10;
+    background: linear-gradient(45deg, var(--LovelyGradientColor1), var(--LovelyGradientColor2));
 }
-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
+
+/*Tablets Media Query*/
+@media screen and (max-width:1024px) {
+    .leftSideMenu {
+        background-color:
+            grid-column: 1 / span 3;
+        grid-row: 2 / span 5;
+    }
+
+    .rightSideMenu {
+        background-color: pink;
+        grid-column: 10 / span 3;
+        grid-row: 2 / span 10;
+    }
+
+    .content {
+        background-color: pink;
+        grid-column: 4 / span 6;
+        grid-row: 2 / span 10;
+        background: linear-gradient(45deg, var(--LovelyGradientColor1), var(--LovelyGradientColor2));
+    }
+}
+
+/*Mobile Device View*/
+@media screen and (max-width:480px) {
+    .leftSideMenu {
+        background-color: yellow;
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 5;
+    }
+
+    .rightSideMenu {
+        background-color: yellow;
+        grid-column: 10 / span 1;
+        grid-row: 2 / span 10;
+    }
+
+    .Content {
+        background-color: yellow;
+        grid-column: 2 / span 10;
+        grid-row: 7 / span 10;
+        background: linear-gradient(45deg, var(--LovelyGradientColor1), var(--LovelyGradientColor2));
+    }
+}
