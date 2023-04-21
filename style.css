@@ -2,14 +2,13 @@
 
 * {
     padding: 0;
-    margin: 0;
+    margin: 0
 }
 
 :root {
     --LovelyGradientColor1: #D14D72;
     --LovelyGradientColor2: #FCC8D1;
 }
-
 .body {
     background-color: azure;
     height: 100vh;
